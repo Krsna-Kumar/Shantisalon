@@ -1,78 +1,414 @@
-/* General Navbar Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --text: #2E2E2E;
+    --background: #ECD58C;
+    --primary: #2c8890;
+    --secondary: #ffffff;
+    --accent: #20767e;
+    --dark-shadow: #04222550;
+    --light-shadow: #42301c77;
+}
+
+.main-txt-clr {
+    color: #2c8890
+}
+
+.light-txt-clr {
+    color: #ffffff
+}
+
+.secondary-txt-clr {
+    color: #ECD58C
+}
+
+body {
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+.highlight-txt {
+    /* color: var(--primary); */
+    background: linear-gradient(0deg, #2C8991, #146870);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
 .navigation-bar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary);
-    padding: 16px 60px;
+    background: linear-gradient(0deg, #2C8991, #146870);
+    height: 100px;
+    padding: 0 100px;
+    z-index: 10;
+    overflow: hidden;
+    /* Navbar on top */
+    border-bottom: 2px solid var(--background);
+    /* transition: all 0.5s ease-in-out; */
     box-shadow: 0px 4px 32px #00000050;
-    z-index: 1000;
 }
 
-/* Navigation Links */
-.navi-links {
-    display: flex;
-    gap: 20px;
-}
 
 .navi-links a {
     color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    margin: 0 14px;
+    font-weight: 400;
+    position: relative;
+    z-index: 4;
+    transition: all 0.3s ease-in;
 }
 
-.navi-links a:hover {
-    color: var(--accent);
+.navi-links a::before {
+    content: "";
+    /* Always include content property */
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--background);
+    border-radius: 25px;
+    transition: width 0.3s ease-in-out;
 }
 
-/* Call Now Button */
+.navi-links a:hover::before {
+    width: 100%;
+}
+
 .navi-call-btn a {
     color: var(--primary);
     background-color: var(--background);
     padding: 12px 32px;
     border-radius: 50px;
+    border: 2px solid var(--background);
     box-shadow: 2px 2px 10px var(--dark-shadow);
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navi-call-btn a:hover {
-    background: var(--secondary);
-    transform: scale(1.05);
+    background-color: var(--primary);
+    color: var(--background);
+    transform: translateY(-3px);
+    box-shadow: 2px 6px 15px var(--dark-shadow);
 }
 
-/* Hamburger Menu (Hidden on Desktop) */
+
+.floating-icon {
+    position: absolute;
+    /* opacity: 0.7; */
+    z-index: -1;
+}
+
+.f1 {
+    top: 0;
+    right: 0;
+}
+
+.f2 {
+    top: 0;
+    left: 0%;
+    transform: rotate(50deg);
+    opacity: 0.4;
+}
+
+.laxmiji {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(600px, 50vw, 1000px);
+}
+
+
+.hero-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.hero-element {
+    padding-top: clamp(100px, 2vw, 300px);
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-element .text-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-element .text-side h2 {
+    /* font-size: 3.5rem; */
+    font-size: clamp(24px, 10vw, 52px);
+    color: var(--light-txt-clr, #fff);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1;
+    text-shadow: 2px 1px 2px #00000025;
+    z-index: 5;
+}
+
+/* Paragraph Styling */
+.hero-element .text-side p {
+    font-size: clamp(16px, 5vw, 22px);
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 500px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 19px;
+    /* space between buttons */
+}
+
+.img-side {
+    position: relative;
+    height: 100%;
+}
+
+
+.img-side .halo {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+    width: clamp(600px, 70vw, 800px);
+    opacity: 1;
+    transform: translateY(-50%) rotate(0deg);
+    animation: rotateinfinite 60s linear infinite;
+    z-index: 1;
+    filter: drop-shadow(2px 2px 5px #00000080);
+}
+
+.img-side .static-img {
+    position: absolute;
+    right: -25%;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 2;
+}
+
+.filter-stroke {
+    filter:
+        drop-shadow(2px 2px 0px var(--background)) drop-shadow(-2px -2px 0px var(--background)) drop-shadow(-2px 2px 0px var(--background)) drop-shadow(2px -2px 0px var(--background));
+}
+
+
+/* Only the halo spins */
+@keyframes rotateinfinite {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.f3 {
+    top: 20%;
+    left: -10%;
+    width: 150px;
+    transform: rotate(-35deg);
+}
+
+.f4 {
+    bottom: 10%;
+    left: 10%;
+    width: 150px;
+    transform: rotate(35deg);
+}
+
+.f5 {
+    position: absolute;
+    left: -50%;
+    width: 800px;
+    opacity: 0.4;
+    transform: translateY(-50%) rotate(0deg);
+    animation: rotateinfinite 60s linear infinite;
+    z-index: 1;
+}
+
 .hamburger {
+    font-size: 28px;
     display: none;
-    font-size: 32px;
-    cursor: pointer;
-    color: white;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+.hamburger i {
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--background);
+    background-color: var(--primary);
+    box-shadow: 2px 2px 10px var(--dark-shadow);
+    border: 1px solid var(--background);
+}
+
+.toggle-f1{
+    bottom: 0;
+    right: -20%;
+    opacity: 0.4;
+    width: 300px;
+}
+
+/* Tablets and below (max-width: 992px) */
+@media screen and (max-width: 992px) {
+    .navi-links a {
+        font-size: 12px;
+        /* Removed extraneous text */
+    }
+
+    .navi-call-btn a {
+        padding: 8px 22px;
+    }
+
+    .f1 {
+        opacity: 0.4;
+    }
+}
+
+/* Smaller tablets and below (max-width: 856px) */
+@media screen and (max-width: 856px) {
     .navi-links {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        justify-content: center;
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
-        background-color: var(--primary);
-        text-align: center;
-        padding: 20px 0;
+        height: 20%;
+        overflow: hidden;
+
+        background: linear-gradient(180deg, #2C8991, #146870);
+        border-bottom-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+        border-bottom: 2px solid var(--background);
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        transition: height 0.5s ease-in-out;
+    }
+
+    .navi-links a {
+        margin: 40px 40px;
+        padding: 8px 0px;
+        font-size: 24px;
+        text-align: left;
+        color: white;
+        text-decoration: none;
     }
 
     .navi-links.active {
         display: flex;
+        height: 93%;
     }
+
+
 
     .hamburger {
         display: block;
     }
+
+    .navi-call-btn {
+        display: none;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-top: 60px;
+    }
+
+    .f5 {
+        opacity: 0.1;
+    }
+
+    .img-side .halo {
+        left: -10%;
+        top: 40%;
+    }
+
+    .img-side .static-img {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 500px;
+        z-index: 2;
+    }
+}
+
+/* Extra Small Devices (max-width: 576px) */
+@media screen and (max-width: 576px) {
+    .navigation-bar {
+        position: absolute;
+        border-bottom-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+        padding: 0 40px;
+        height: 84px;
+    }
+
+    .navi-logo img{
+        width: 80px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .img-side{
+        margin-top: 80px;
+    }
+
+    .img-side .static-img {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 400px;
+        z-index: 2;
+    }
+
+    .f3{
+       top: 5%;
+    }
+
+    .f5{
+        opacity: 0;
+    }
+
+    .laxmiji{opacity: 0.5;}
 }

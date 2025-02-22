@@ -138,7 +138,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(600px, 80vw, 1000px);
+    width: clamp(600px, 50vw, 1000px);
 }
 
 

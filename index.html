@@ -10,11 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="loader.css">
+
     <!-- Typography CSS -->
     <link rel="stylesheet" href="typography.css">
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="test.css">
 
     <!-- Buttons CSS -->
     <link rel="stylesheet" href="buttons.css">
@@ -23,6 +26,11 @@
 </head>
 
 <body>
+    <!-- Loader -->
+    <div class="loader">
+        <img src="Images/Loader.png" alt="Loading...">
+    </div>
+
 
     <div class="navigation-bar">
         <div class="navi-logo">
@@ -35,7 +43,7 @@
             <a href="#">Gallery</a>
             <a href="#">Contact Us</a>
 
-        <img class="floating-icon toggle-f1" src="Images/floral-design1.png" alt="">
+            <img class="floating-icon toggle-f1" src="Images/floral-design1.png" alt="">
 
         </div>
         <div class="navi-call-btn">
@@ -85,6 +93,12 @@
     </div>
 
     <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.querySelector('.loader').classList.add('hidden');
+            }, 1000); // Loader stays for at least 1 second before fading out
+        });
+
         function toggleMenu() {
             const navbar = document.querySelector('.navigation-bar');
             const navLinks = document.querySelector('.navi-links');
@@ -97,6 +111,7 @@
             }
 
         }
+
     </script>
 </body>
 
