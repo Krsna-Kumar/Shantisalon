@@ -319,14 +319,14 @@ body {
     }
 
     .navi-links a {
-        margin: 40px 40px;
+        margin: 18px 40px;
         padding: 8px 0px;
-        font-size: 24px;
+        font-size: 16px;
         text-align: left;
         color: white;
         text-decoration: none;
     }
-
+    
     .navi-links.active {
         display: flex;
         height: 93%;
