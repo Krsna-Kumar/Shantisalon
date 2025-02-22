@@ -246,9 +246,9 @@ body {
 }
 
 .f3 {
-    top: 20%;
+    top: 10%;
     left: -10%;
-    width: 150px;
+    width: 250px;
     transform: rotate(-35deg);
 }
 
@@ -379,8 +379,9 @@ body {
     .img-side .static-img {
         position: absolute;
         left: 0;
-        top: 40%;
-        width: 500px;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 400px;
         z-index: 2;
     }
 }
