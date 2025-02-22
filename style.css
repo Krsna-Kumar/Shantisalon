@@ -145,16 +145,21 @@ body {
 .hero-wrapper {
     overflow: hidden;
     position: relative;
+    height: auto;
+    padding-bottom: 200px;
+    /* border: 2px solid black; */
 }
 
 .hero {
     height: 100vh;
     position: relative;
     z-index: 0;
+    /* border: 2px solid red; */
 }
 
 .hero-element {
     padding-top: clamp(100px, 2vw, 300px);
+    /* border: 2px solid blue; */
 
     height: 100vh;
     display: flex;
@@ -165,6 +170,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    /* border: 2px solid cyan; */
+
 }
 
 .hero-element .text-side h2 {
@@ -194,6 +202,7 @@ body {
 .img-side {
     position: relative;
     height: 100%;
+    /* border: 2px solid purple; */
 }
 
 
@@ -211,10 +220,12 @@ body {
 
 .img-side .static-img {
     position: absolute;
-    right: -25%;
+    right: -5%;
     top: 50%;
     transform: translateY(-40%);
     z-index: 2;
+
+    /* border: 2px solid #20767e; */
 }
 
 .filter-stroke {
@@ -319,9 +330,9 @@ body {
     }
 
     .navi-links a {
-        margin: 40px 40px;
+        margin: 18px 40px;
         padding: 8px 0px;
-        font-size: 24px;
+        font-size: 16px;
         text-align: left;
         color: white;
         text-decoration: none;
@@ -331,8 +342,6 @@ body {
         display: flex;
         height: 93%;
     }
-
-
 
     .hamburger {
         display: block;
@@ -350,6 +359,10 @@ body {
 
 /* Mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
+    .hero-wrapper{
+    padding-bottom: 380px;
+    }
+
     .hero {
         padding-top: 60px;
     }
@@ -379,5 +392,36 @@ body {
         border-bottom-right-radius: 32px;
         border-bottom-left-radius: 32px;
         padding: 0 40px;
+        height: 84px;
     }
+
+    .navi-logo img{
+        width: 80px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .img-side{
+        margin-top: 80px;
+    }
+
+    .img-side .static-img {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 400px;
+        z-index: 2;
+    }
+
+    .f3{
+       top: 5%;
+    }
+
+    .f5{
+        opacity: 0;
+    }
+
+    .laxmiji{opacity: 0.5;}
 }
