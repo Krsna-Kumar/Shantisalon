@@ -23,12 +23,15 @@
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.darker-btn:hover {
-    color: var(--background);
-    background-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 4px 8px 10px var(--light-shadow);
+.darker-btn:hover,
+.darker-btn:active,
+.darker-btn:focus {
+  color: var(--background);
+  background-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 4px 8px 10px var(--light-shadow);
 }
+
 
 /* Secondary Button */
 .secondary-btn {
@@ -43,7 +46,9 @@
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.secondary-btn:hover {
+.secondary-btn:hover,
+.secondary-btn:active,
+.secondary-btn:focus {
     color: var(--primary);
     background-color: var(--background);
     transform: translateY(-3px);

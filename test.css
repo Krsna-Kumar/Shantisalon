@@ -326,14 +326,12 @@ body {
         color: white;
         text-decoration: none;
     }
-    
+
     .navi-links.active {
         display: flex;
         height: 93%;
     }
-
-
-
+    
     .hamburger {
         display: block;
     }
