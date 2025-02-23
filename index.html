@@ -22,14 +22,92 @@
     <!-- Buttons CSS -->
     <link rel="stylesheet" href="buttons.css">
 
+    <link rel="stylesheet" href="modpopup.css">
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Palette Selector Button -->
+    <button id="palette-btn"><i class="ri-settings-2-fill"></i></button>
+
+    <!-- Palette Popup -->
+    <!-- <div id="palette-popup" class="popup hidden">
+        <div class="popup-content">
+            <h3>Select a Color Palette</h3>
+            <div class="palette-option" data-palette="default">
+                <span class="color-swatch" style="background: #2E2E2E;"></span>
+                <span class="color-swatch" style="background: #ECD58C;"></span>
+                <span class="color-swatch" style="background: #2c8890;"></span>
+                <span class="color-swatch" style="background: #ffffff;"></span>
+                <span class="color-swatch" style="background: #20767e;"></span>
+            </div>
+            <div class="palette-option" data-palette="warm">
+                <span class="color-swatch" style="background: #4E342E;"></span>
+                <span class="color-swatch" style="background: #FFCCBC;"></span>
+                <span class="color-swatch" style="background: #BF360C;"></span>
+                <span class="color-swatch" style="background: #FFF8E1;"></span>
+                <span class="color-swatch" style="background: #E65100;"></span>
+            </div>
+            <div class="palette-option" data-palette="cool">
+                <span class="color-swatch" style="background: #263238;"></span>
+                <span class="color-swatch" style="background: #B0BEC5;"></span>
+                <span class="color-swatch" style="background: #0277BD;"></span>
+                <span class="color-swatch" style="background: #ECEFF1;"></span>
+                <span class="color-swatch" style="background: #01579B;"></span>
+            </div>
+            <div class="palette-option" data-palette="light">
+                <span class="color-swatch" style="background: #2E2E2E;"></span>
+                <span class="color-swatch" style="background: #fff9e7;"></span>
+                <span class="color-swatch" style="background: #2c8890;"></span>
+                <span class="color-swatch" style="background: #ECD58C;"></span>
+                <span class="color-swatch" style="background: #20767e;"></span>
+            </div>
+            <div class="palette-option" data-palette="dark">
+                <span class="color-swatch" style="background: #fff9e7;"></span>
+                <span class="color-swatch" style="background: #2E2E2E;"></span>
+                <span class="color-swatch" style="background: #2c8890;"></span>
+                <span class="color-swatch" style="background: #ECD58C;"></span>
+                <span class="color-swatch" style="background: #20767e;"></span>
+            </div>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>  -->
+
+
+    <div id="palette-popup" class="popup hidden">
+        <div class="popup-content">
+            <h5>Select a Color Palette</h5>
+            <div class="palette-option" data-palette="default">
+                <!-- <span class="color-swatch" style="background: #2c8890;"></span> -->
+                 <h4 class="txt-swatch" style="background: #2c8890;">Default</h4>
+            </div>
+            <div class="palette-option" data-palette="warm">
+                <!-- <span class="color-swatch" style="background: #BF360C;"></span> -->
+                <h4 class="txt-swatch" style="background: #BF360C;">Warm</h4>
+            </div>
+            <div class="palette-option" data-palette="cool">
+                <!-- <span class="color-swatch" style="background: #0277BD;"></span> -->
+                <h4 class="txt-swatch" style="background: #0277BD;">Cool</h4>
+            </div>
+            <div class="palette-option" data-palette="light">
+                <!-- <span class="color-swatch" style="background: #fff9e7;"></span> -->
+                <h4 class="txt-swatch" style="background: #fff9e7;">Light</h4>
+            </div>
+            <div class="palette-option" data-palette="dark">
+                <!-- <span class="color-swatch" style="background: #2E2E2E;"></span> -->
+                <h4 class="txt-swatch" style="background: #2E2E2E;">Dark</h4>
+            </div>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    
+
     <!-- Loader -->
-    <div class="loader">
+    <!-- <div class="loader">
         <img src="Images/Loader.png" alt="Loading...">
-    </div> 
+    </div> -->
     <!-- Loader Ends -->
 
     <!-- Navigation Bar -->
@@ -62,7 +140,7 @@
     <!-- Hero Section -->
     <div class="hero-wrapper">
         <div class="container hero">
-            <img class="floating-icon laxmiji" src="Images/Laxmi-maa-illustration1.png" alt="Laxmiji">
+            <img class="floating-icon laxmiji" src="Images/Laxmi-maa-illustration2.png" alt="Laxmiji">
             <img class="floating-icon f3" src="Images/FullFlowerIcon5.png" alt="Flower5">
             <img class="floating-icon f4" src="Images/FullFlowerIcon5.png" alt="Flower5">
             <img class="floating-icon f5" src="Images/blue-halof.png" alt="Flower5">
@@ -76,7 +154,7 @@
 
             <div class="row hero-element">
                 <div class="col-md-6 text-side p-md-0">
-                    <h2 class="light-txt-clr">
+                    <h2 class="secondary-txt-clr">
                         Your <span class="highlight-txt">Beauty, </span>
                         Your <span class="highlight-txt">Serenity, </span>
                         Your <span class="highlight-txt">Shanti</span>
@@ -232,9 +310,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/HairSpa-icon.png" width="50px" alt="">
-                            </div>                              
-                            <h4>Classic Haircut</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis unde debitis dicta?</p>
+                            </div>
+                            <h4 class="secondary-txt-clr">Classic Haircut</h4>
+                            <p class="text-txt-clr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis unde debitis dicta?</p>
                         </div>
                     </div>
                     <!-- Box 2 -->
@@ -243,9 +321,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/makeup-icon.png" width="80px" alt="">
-                            </div>   
-                            <h4>Hair Treatment</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam explicabo eius
+                            </div>
+                            <h4 class="secondary-txt-clr">Hair Treatment</h4>
+                            <p class="text-txt-clr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam explicabo eius
                                 excepturi.</p>
                         </div>
                     </div>
@@ -255,9 +333,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/Hairwash-icon.png" width="80px" alt="">
-                            </div>   
-                            <h4>Hair Wash</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dicta corrupti tenetur.
+                            </div>
+                            <h4 class="secondary-txt-clr">Hair Wash</h4>
+                            <p class="text-txt-clr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dicta corrupti tenetur.
                             </p>
                         </div>
                     </div>
@@ -267,9 +345,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/Haircolor-icon.png" width="50px" alt="">
-                            </div>   
-                            <h4>Hair Colour</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit itaque quis rerum.</p>
+                            </div>
+                            <h4 class="secondary-txt-clr">Hair Colour</h4>
+                            <p class="text-txt-clr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit itaque quis rerum.</p>
                         </div>
                     </div>
                     <!-- Box 5 -->
@@ -278,9 +356,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/makeup-icon.png" width="80px" alt="">
-                            </div>   
-                            <h4>Hair Stylist</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo facere totam molestiae?</p>
+                            </div>
+                            <h4 class="secondary-txt-clr">Hair Stylist</h4>
+                            <p class="text-txt-clr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo facere totam molestiae?</p>
                         </div>
                     </div>
                     <!-- Box 6 -->
@@ -289,9 +367,9 @@
                             <div class="icon-wrapper">
                                 <img class="s-iconbg" src="Images/Iconbg.png" width="150px" alt="">
                                 <img class="s-icon" src="Images/HairSpa-icon.png" width="50px" alt="">
-                            </div>   
-                            <h4>Hair Extenstion</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe neque eum.</p>
+                            </div>
+                            <h4 class="secondary-txt-clr">Hair Extenstion</h4>
+                            <p class="text-txt-clr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe neque eum.</p>
                         </div>
                     </div>
                 </div>
@@ -422,50 +500,56 @@
 
             <div class="row contact-element">
                 <div class="col-md-6 text-side p-md-0">
-                    
+
                     <div class="mini-heading-single">
-                      <h5>Have Question?</h5>
+                        <h5>Have Question?</h5>
                     </div>
                     <h2 class="light-txt-clr">
-                      Let's get in<span class="highlight-txt"> Touch!</span>
+                        Let's get in<span class="highlight-txt"> Touch!</span>
                     </h2>
                     <div class="contact-form">
 
-                      <form>
-                        <img class="floating-icon cf-f7" src="Images/FullFlowerIcon5.png" alt="Flower5">
-                        <div class="row mb-3">
-                          <div class="col-md-6">
-                            <label for="contactName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="contactName" placeholder="Your name">
-                          </div>
-                          <div class="col-md-6">
-                            <label for="contactEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                          <div class="col-md-6">
-                            <label for="contactPhone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="contactPhone" placeholder="Your phone number">
-                          </div>
-                          <div class="col-md-6">
-                            <label for="contactSubject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="contactSubject" placeholder="Subject">
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="contactMessage" class="form-label">Message</label>
-                          <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your message"></textarea>
-                        </div>
-                        <button type="submit" class="secondary-btn">Submit</button>
-                      </form>
+                        <form>
+                            <img class="floating-icon cf-f7" src="Images/FullFlowerIcon5.png" alt="Flower5">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="contactName" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="contactName" placeholder="Your name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contactEmail"
+                                        placeholder="name@example.com">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="contactPhone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="contactPhone"
+                                        placeholder="Your phone number">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contactSubject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="contactSubject" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Message</label>
+                                <textarea class="form-control" id="contactMessage" rows="4"
+                                    placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="secondary-btn">Submit</button>
+                        </form>
                     </div>
-                  </div>
-                  
-                  
+                </div>
+
+
                 <div class="col-md-6 img-side">
-                    
-                    <iframe class="border border-dark border-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5643.514181076793!2d-111.65136561782914!3d35.203364726158384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f4622bd405d%3A0xfeaa51369dec2543!2s611%20N%20Leroux%20St%2C%20Flagstaff%2C%20AZ%2086001%2C%20USA!5e0!3m2!1sen!2sin!4v1740260565705!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <iframe class="border border-dark border-1"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5643.514181076793!2d-111.65136561782914!3d35.203364726158384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f4622bd405d%3A0xfeaa51369dec2543!2s611%20N%20Leroux%20St%2C%20Flagstaff%2C%20AZ%2086001%2C%20USA!5e0!3m2!1sen!2sin!4v1740260565705!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -474,54 +558,57 @@
 
     <!-- Footer -->
     <div class="footer-wrapper">
-            <!-- <img class="floating-icon laxmiji" src="Images/Laxmi-maa-illustration1.png" alt="Laxmiji"> -->
-            <!-- <img class="floating-icon cf-f6" src="Images/FullFlowerIcon5.png" alt="Flower5"> -->
-            <img class="floating-icon ft-f1" src="Images/Project.png" alt="Flower5">
-            <img class="floating-icon ft-f2" src="Images/Project.png" alt="Flower5">
-            <img class="floating-icon ft-f3" src="Images/Project.png" alt="Flower5">
-            <img class="floating-icon ft-f4" src="Images/Project.png" alt="Flower5">
-            <!-- <img class="floating-icon ft-f5" src="Images/Project.png" alt="Flower5"> -->
+        <!-- <img class="floating-icon laxmiji" src="Images/Laxmi-maa-illustration1.png" alt="Laxmiji"> -->
+        <!-- <img class="floating-icon cf-f6" src="Images/FullFlowerIcon5.png" alt="Flower5"> -->
+        <img class="floating-icon ft-f1" src="Images/Project.png" alt="Flower5">
+        <img class="floating-icon ft-f2" src="Images/Project.png" alt="Flower5">
+        <img class="floating-icon ft-f3" src="Images/Project.png" alt="Flower5">
+        <img class="floating-icon ft-f4" src="Images/Project.png" alt="Flower5">
+        <!-- <img class="floating-icon ft-f5" src="Images/Project.png" alt="Flower5"> -->
 
         <div class="container">
-          <div class="row">
-            <!-- Column 1: Logo & Description -->
-            <div class="col-md-4">
-              <div class="footer-logo mb-4">
-                <img src="Images/logowithtext.png" width="100" alt="Logo">
-              </div>
-              <p class="light-txt-clr">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae est dolore harum repellendus minima? Aspernatur.
-              </p>
+            <div class="row">
+                <!-- Column 1: Logo & Description -->
+                <div class="col-md-4">
+                    <div class="footer-logo mb-4">
+                        <img src="Images/logowithtext.png" width="100" alt="Logo">
+                    </div>
+                    <p class="light-txt-clr">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae est dolore harum repellendus
+                        minima? Aspernatur.
+                    </p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="ri-map-pin-line"></i> <a href="#">1234 Street Name, City, Country</a></li>
+                        <li><i class="ri-smartphone-line"></i> <a href="#">+1 234 567 890</a></li>
+                        <li><i class="ri-message-3-line"></i> <a href="#">info@example.com</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Column 2: Quick Links -->
-            <div class="col-md-4">
-              <h5 class="footer-heading">Quick Links</h5>
-              <ul class="footer-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <!-- Column 3: Contact Info -->
-            <div class="col-md-4">
-              <h5 class="footer-heading">Contact Us</h5>
-              <ul class="footer-contact">
-                <li><i class="ri-map-pin-line"></i> <a href="#">1234 Street Name, City, Country</a></li>
-                <li><i class="ri-smartphone-line"></i> <a href="#">+1 234 567 890</a></li>
-                <li><i class="ri-message-3-line"></i> <a href="#">info@example.com</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- <div class="footer-bottom text-center mt-4">
+            <!-- <div class="footer-bottom text-center mt-4">
             <p>© 2024 Your Company. All Rights Reserved.</p>
             <p>Privacy Policy</p>
           </div> -->
         </div>
-      </div>
+    </div>
 
-      <script src="script.js"></script>
+    <script src="script.js"></script>
+
+    <script src="modpopup.js"></script>
 </body>
 
 </html>
