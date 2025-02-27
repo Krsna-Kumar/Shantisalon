@@ -147,7 +147,7 @@ body {
 }
 
 .navigation-bar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -416,13 +416,20 @@ h2 {
     z-index: 2;
 }
 
-.img-side .static-img-invert {
+.img-side .owner-static{
     position: absolute;
-    left: -15%;
+    right: -15%;
     top: 50%;
     transform: translateY(-40%);
     z-index: 2;
 }
+
+.img-side .static-img-invert {
+    position: absolute;
+    left: -30%;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 30}
 
 .filter-stroke {
     filter:
@@ -1066,6 +1073,7 @@ input:focus {
 
 /* Smaller tablets and below (max-width: 856px) */
 @media screen and (max-width: 856px) {
+
     .social-media {
         display: none;
     }
